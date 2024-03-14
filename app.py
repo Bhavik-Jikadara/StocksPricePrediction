@@ -17,10 +17,9 @@ st.set_page_config(
 st.title('Stock Trend Prediction')
 
 # input the Ticker
-start_date = st.date_input('Enter the start Date: ',
-                           datetime.datetime(2010, 5, 17))
+start_date = st.date_input('Enter the start Date: ', datetime.datetime(2010, 5, 17))
 end_date = st.date_input('Enter the End Date: ')
-user_input = st.text_input('Enter the Stock Ticker', 'TTM')
+user_input = st.text_input('Enter the Stock Ticker', 'RELIANCE.NS')
 df = yf.download(user_input, start=start_date, end=end_date)
 
 
